@@ -14,7 +14,10 @@ function WeatherCard({
         <div className='WeatherCard'>
             <h2>{city}</h2>
             <p>Humidity: {humidity}%</p>
-            <p></p>
+            <p>Current Tempurature: {currentTemp}</p>
+            <p>Lows: {lowTemp}</p>
+            <p>Highs: {highTemp}</p>
+            <p>Weather Type: {weatherType}</p>
         </div>
     )
     
