@@ -1,6 +1,7 @@
 import React, {useEffect, useState, useMemo} from 'react';
 import axios from "axios";
 import { WEATHER_APP_API_KEY } from '../API_KEYS';
+import WeatherCard from "../components/WeatherCard";
 const openWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=Orlando&appid=${WEATHER_APP_API_KEY}`;
 
 function Home(){
@@ -21,13 +22,19 @@ function Home(){
                 setWeatherData({});
             });
             //display this weather data in our app
-    }, [])
-    
+    }, []);
+
+    const { humidity } = useMemo(() =>{
+        const weatherMain = weatherData.main || {}
+        return {
+            humidity:weatherMain.humidity
+        }
+    }, [weatherData])
+
     return(
     <div>
         <h1>Weather App</h1>
-        <h2>{weatherData.name}</h2>
-        <p>Humidity: {weatherData.main && weatherData.main.humidity}%</p>
+        <WeatherCard city={'Orlando'} humidity={humidity} />
     </div>
     );
 }
