@@ -1,0 +1,17 @@
+/* rememebr to reference from class names in WeatherCard */
+
+.WeatherCard{
+    border: 3px solid black;
+    margin: 0 30px;
+    max-width: 1280px;
+    padding: 25px;
+    justify-content: center;
+}
+
+.city{
+    font-size: 60px;
+}
+
+.type{
+
+}
