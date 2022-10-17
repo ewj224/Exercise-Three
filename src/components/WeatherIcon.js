@@ -14,7 +14,7 @@ function WeatherIcon({weatherType}){
     case 'Clear':
         return <FontAwesomeIcon icon={faSun} />
     default:
-        return <FontAwesomeIcon icon={faSun} />
+        return null;
    }
    return <div>
         

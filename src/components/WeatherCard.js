@@ -16,7 +16,7 @@ function WeatherCard({
             <h2 className="city">{city}</h2>
             <div className="WeatherIcon--WeatherType">
                 <WeatherIcon weatherType={weatherType}/>
-                <p className="type">Weather Type: {weatherType}</p>
+                <p className="type">{weatherType}</p>
             </div>
             <p className="">Humidity: {humidity}%</p>
             <p className="">Current Tempurature: {currentTemp} F</p>

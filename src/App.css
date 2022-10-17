@@ -1,17 +1,100 @@
 /* rememebr to reference from class names in WeatherCard */
+/* 
+.App{
+    font-size:16px;
+    min-height: 100vh;
+} */
+
+.wraper{
+    min-width: 1000px;
+}
+
+header{
+    margin: 20px;
+    display: flex-end;
+    text-align: center;
+    font-size: 25px;
+}
+
+header a{
+    margin-left: 45px;
+    margin-right: 50px;
+    max-width: 1200px;
+    width:500px;
+}
+
+
+
+a:link{
+    text-decoration:none;
+}
+
+a:visited{
+    text-decoration: none;
+    color:black;
+}
+
+/* Hover animation for each link */
+
+header a::before{
+    transform: scaleX(0);
+    transform-origin: right; 
+}
+
+header a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.Chicago::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 10px; left: 0;
+    inset: 20px 558px 675px 60px ;
+    background: #FEFCD7;
+    z-index: -1;
+    transition: transform .5s ease;
+}
+
+/* having issues with aligning items to screen size */
+
+.Seoul::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 10px; left: 0;
+    inset: 20px 450px 675px 240px ; 
+    /* top,bottom,right,left */
+    background: #FEFCD7;
+    z-index: -1;
+    transition: transform .5s ease;
+}
+
+/* end of hover code */
 
 .WeatherCard{
+    background-color: #FEFCD7;
     border: 3px solid black;
-    margin: 0 30px;
+    margin: auto;
     max-width: 1280px;
     padding: 25px;
-    justify-content: center;
+    width: 600px;
 }
 
 .city{
     font-size: 60px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.WeatherIcon--WeatherType svg {
+    height: 150px;
 }
 
 .type{
-
+    font-size: 30px;
+    margin-top: 0px;
 }
+

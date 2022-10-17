@@ -68,7 +68,6 @@ function Home(){
     return(
     <div>
         <Header />
-        <h1>Weather App</h1>
         <WeatherCard 
         city={city} 
         cloudiness={cloudiness}
