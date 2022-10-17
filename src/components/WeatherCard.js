@@ -18,13 +18,12 @@ function WeatherCard({
                 <WeatherIcon weatherType={weatherType}/>
                 <p className="type">{weatherType}</p>
             </div>
-            <p className="">Humidity: {humidity}%</p>
-            <p className="">Current Tempurature: {currentTemp} F</p>
-            <p className="">Lows: {lowTemp} F</p>
-            <p className="">Highs: {highTemp} F</p>
-            <p className="">Wind Speed: {windSpeed} mph</p>
-            <p className="">Cloudiness: {cloudiness}%</p>
-            {/* <p>Cloudiness: {cloudiness}</p> */}
+            <p className="humidity">Humidity: {humidity}%</p>
+            <p className="cloudiness">Cloudiness: {cloudiness}%</p>
+            <p className="windSpeed">Wind Speed: {windSpeed} mph</p>
+            <p className="temp">Current Tempurature: {currentTemp} F</p>
+            <p className="low">Lows: {lowTemp} F</p>
+            <p className="high">Highs: {highTemp} F</p>
         </div>
     )
     
