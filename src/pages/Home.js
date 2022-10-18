@@ -49,7 +49,7 @@ function Home(){
     const { windSpeed } = useMemo (() =>{
         const weatherSpeed = weatherData.wind || {}
         return{
-            windSpeed:weatherSpeed.speed
+            windSpeed:Math.round(weatherSpeed.speed)
         }
     }, [weatherData])
 
@@ -61,9 +61,6 @@ function Home(){
             weatherType:weatherSet.main
         }
     }, [weatherData])
-
-    console.log(weatherType);
-    console.log("state value", weatherData);
 
     return(
     <div>

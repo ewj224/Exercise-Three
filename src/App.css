@@ -1,37 +1,25 @@
-/* rememebr to reference from class names in WeatherCard */
-/* 
-.App{
-    font-size:16px;
-    min-height: 100vh;
-} */
-
-.wraper{
-    min-width: 1000px;
+.wrapper{
+    min-width: 600px;
 }
 
 header{
-    margin: 20px;
     display: flex-end;
-    text-align: center;
     font-size: 25px;
+    margin: 20px;
+    text-align: center;
 }
 
 header a{
-    margin-left: 45px;
-    margin-right: 50px;
-    max-width: 1200px;
-    width:500px;
+    padding: 40px;
 }
-
-
 
 a:link{
     text-decoration:none;
 }
 
 a:visited{
-    text-decoration: none;
     color:black;
+    text-decoration: none;
 }
 
 /* Hover animation for each link */
@@ -47,24 +35,44 @@ header a:hover::before{
 }
 
 .Chicago::before {
+    background: #FEFCD7;
     content: "";
     display: block;
+    inset: 20px 910px 690px 460px;
     position: absolute;
-    top: 0; right: 0; bottom: 10px; left: 0;
-    inset: 20px 558px 675px 60px ;
-    background: #FEFCD7;
-    z-index: -1;
     transition: transform .5s ease;
+    z-index: -1;
 }
 
 /* having issues with aligning items to screen size */
 
 .Seoul::before {
+    background: #FEFCD7;
+    content: "";
+    display: block;
+    inset: 20px 770px 690px 630px ; 
+    position: absolute;
+    transition: transform .5s ease;
+    z-index: -1;
+}
+
+
+.Brooklyn::before {
+    background: #FEFCD7;
+    content: "";
+    display: block;
+    inset: 20px 590px 690px 770px ; 
+    position: absolute;
+    transition: transform .5s ease;
+    z-index: -1;
+}
+
+
+.Paris::before {
     content: "";
     display: block;
     position: absolute;
-    top: 0; right: 0; bottom: 10px; left: 0;
-    inset: 20px 450px 675px 240px ; 
+    inset: 20px 460px 690px 950px ; 
     /* top,bottom,right,left */
     background: #FEFCD7;
     z-index: -1;
@@ -91,38 +99,76 @@ header a:hover::before{
 
 .WeatherIcon--WeatherType svg {
     height: 150px;
+    margin-top: 15px;
 }
 
 .type{
     font-size: 30px;
-    margin-top: 0px;
-}
-
-.humidity{
-    display: flex;
-    margin-left: 375px;
-    margin-top: -165px;
-}
-
-.cloudiness{
-    margin-left: 375px;
-}
-
-.windSpeed{
-    margin-left: 375px;
+    margin-bottom: 20px;
+    margin-left: 35%;
+    margin-top: -75px;
 }
 
 .temp{
-    text-align: center;
-    margin-bottom: -37px;
-    margin-top: 150px;
+    display: flex;
+    font-size: 35px;
+    margin-bottom: 10px;
+    margin-left: 210px;
+    margin-top: -100px;
+}
+
+.cloudiness{
+    margin-left: 450px;
 }
 
 .low{
-    margin-left: 40px;
-    margin-bottom: -38px;
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 415px;
+    margin-top: -10px;
+}
+
+.humidity{
+    margin-bottom: -10px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.windSpeed{
+    margin-bottom: -40px;
+    margin-left: 10px;
+    margin-top: -20px;
 }
 
 .high{
-    margin-left: 470px;
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 415px;
+    margin-top: -45px;
+}
+
+/* circles for temperature */
+
+.circle {
+    border: 10px;
+    border-radius: 50%;
+    height: 120px;
+    position: relative;
+    width: 120px;
+}
+
+.circle.circle-one{
+    margin-left:20px;
+    margin-top: 50px;
+}
+
+.circle.circle-two{
+    margin-left:235px;
+    margin-top: -120px;
+}
+
+.circle.circle-three{
+    align-items: center;
+    margin-left:450px;
+    margin-top: -122px;
 }
